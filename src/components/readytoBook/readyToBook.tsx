@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import * as styles from "./readyToBook.module.scss";
 import { Share } from "../../icons/share";
 import { Telegram } from "../../icons/telegram";
@@ -16,7 +16,7 @@ export const ReadyToBook = () => {
               className={styles.img_link}
             >
               <abbr title="with telegram">
-                <img src="/images/avatar.png" alt="int avat" />
+                <img src="/images/avatar.jpg" alt="int avat" />
                 <Telegram />
                 <Share />
               </abbr>
