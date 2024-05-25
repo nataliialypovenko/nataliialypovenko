@@ -131,7 +131,7 @@ export const ContactOrBookTemplate = () => {
       </div> */}
       <div className={styles.form_block}>
         <div className={styles.left_img}>
-          <img src="/withCamera.png" alt="netali_photo" />
+          <img src="/images/withCamera.png" alt="netali_photo" />
         </div>
         <form className={styles.form} onSubmit={handleFormValidation}>
           <p hidden>

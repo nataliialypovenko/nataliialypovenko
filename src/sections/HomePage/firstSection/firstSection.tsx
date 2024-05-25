@@ -9,7 +9,7 @@ export const FirstSection = () => {
         <div className={styles.about_content}>
           <div className={styles.img}>
             <Link to="/about">
-              <img src="/main_photo.png" alt="avat" />
+              <img src="/images/main_photo.png" alt="avat" />
             </Link>
           </div>
 

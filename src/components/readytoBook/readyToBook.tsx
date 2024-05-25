@@ -16,7 +16,7 @@ export const ReadyToBook = () => {
               className={styles.img_link}
             >
               <abbr title="with telegram">
-                <img src="/avatar.png" alt="int avat" />
+                <img src="/images/avatar.png" alt="int avat" />
                 <Telegram />
                 <Share />
               </abbr>

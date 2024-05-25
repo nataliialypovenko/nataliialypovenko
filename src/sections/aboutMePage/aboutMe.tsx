@@ -30,7 +30,7 @@ export const AboutMe: React.FC<PageComponentProps> = ({
     <div className={styles.about_wrap}>
       <div className={styles.about_content}>
         <div className={styles.img_block}>
-          <img src="/about_me.png" alt="left_photo" />
+          <img src="/images/about_me.png" alt="left_photo" />
           <ul className={styles.socialmedia_location}>
             <li>Edmonton , AB , CA</li>
             <li>
