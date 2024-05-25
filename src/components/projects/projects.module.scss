@@ -1,0 +1,190 @@
+.projects_wrap {
+  margin-bottom: 100px;
+  .chose_categories {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 50px;
+    position: relative;
+    .title {
+      font-size: 18px;
+      color: var(--color-white);
+      font-family: var(--font-SfThin);
+    }
+    .categories_picker {
+      display: flex;
+      align-items: flex-end;
+      gap: 10px;
+      list-style: none;
+      width: 100%;
+      li {
+        button {
+          background-color: unset;
+          border: unset;
+          color: var(--color-white);
+          font-size: 30px;
+          font-family: var(--font-SfMedium);
+
+          opacity: 0.5;
+          transition: all 0.2s ease-in;
+        }
+
+        &[data-picked="true"] {
+          button {
+            opacity: 1;
+          }
+        }
+        &[data-picked="false"] {
+          &:hover {
+            button {
+              color: var(--color-gray);
+            }
+          }
+        }
+      }
+    }
+    .sort_wrap {
+      position: relative;
+      max-width: 120px;
+      width: 100%;
+
+      .sort_button {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        gap: 5px;
+        color: var(--color-white);
+        font-family: var(--font-SfMedium);
+        font-size: 17px;
+        transition: all 0.3s ease-in-out;
+        .sort_svg {
+          width: 15px;
+          height: 15px;
+          &[data-menuisopen="true"] {
+            svg {
+              rotate: 270deg;
+            }
+          }
+          &[data-menuisopen="false"] {
+            svg {
+              rotate: 90deg;
+            }
+          }
+          svg {
+            width: 15px;
+            height: 15px;
+            transition: all 0.4s ease-in-out;
+            path {
+              fill: var(--color-white);
+            }
+          }
+        }
+      }
+      .option_list {
+        position: absolute;
+        padding: 5px;
+        background-color: var(--color-bg);
+        z-index: 6;
+        border: 1px solid var(--color-gray);
+        border-radius: 4px;
+        list-style: none;
+        opacity: 0;
+        .option {
+          &:not(:last-child) {
+            margin-bottom: 2px;
+          }
+          button {
+            padding-inline: 5px;
+            border-radius: 2px;
+            width: 100%;
+            color: var(--color-white);
+            font-family: var(--font-SfMedium);
+
+            font-size: 17px;
+          }
+          &:hover {
+            button {
+              color: var(--color-bg) !important;
+              background-color: var(--color-white) !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  .items_by_categorie {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    list-style: none;
+    transition: opacity 1.2s ease-in-out;
+    z-index: 4;
+    .empty {
+      padding-top: 50px;
+      font-size: 20px;
+      color: var(--color-gray);
+      font-family: var(--font-SfMedium);
+    }
+  }
+}
+@media (max-width: 1080px) {
+  .projects_wrap {
+    .chose_categories {
+      align-items: flex-start !important;
+      flex-direction: column !important;
+      margin-left: 10px;
+      .categories_picker {
+        flex-direction: column;
+        gap: 5px;
+        align-items: flex-start;
+        margin-bottom: 10px;
+      }
+      .sort_wrap {
+        .sort_button {
+          margin-left: unset;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .projects_wrap {
+    .items_by_categorie {
+      gap: 50px;
+    }
+    .chose_categories {
+      .title {
+        font-size: 17px;
+      }
+      .categories_picker {
+        li {
+          button {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 420px) {
+  .projects_wrap {
+    .chose_categories {
+      .title {
+        font-size: 15px;
+      }
+      .categories_picker {
+        li {
+          button {
+            font-size: 17px;
+          }
+        }
+      }
+    }
+  }
+}

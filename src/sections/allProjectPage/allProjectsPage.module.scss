@@ -1,0 +1,15 @@
+.all_products_wrap {
+  padding: 150px;
+  .title {
+    text-align: center;
+    font-family: var(--font-SfThin);
+    font-weight: unset;
+    color: var(--color-white);
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 1330px) {
+  .all_products_wrap {
+    padding-inline: 0px;
+  }
+}

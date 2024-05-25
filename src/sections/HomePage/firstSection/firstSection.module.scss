@@ -1,0 +1,108 @@
+.first_wrap {
+
+  padding-inline: 50px;
+  height: 100dvh;
+  .about {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    .about_content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      .img {
+        margin: auto;
+        max-width: 400px;
+        min-width: 350px;
+        max-height: 500px;
+        overflow: hidden;
+
+        &:hover {
+          img {
+            scale: 1.1;
+          }
+        }
+        img {
+          transition: all 0.4s ease-in-out;
+        }
+      }
+
+      span {
+        font-size: 15px;
+        color: var(--color-white);
+        font-family: var(--font-SfThin);
+        position: absolute;
+        top: -4%;
+      }
+      .redirect_to_blog {
+        text-decoration: unset;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        margin-bottom: 5px;
+        position: absolute;
+        bottom: -6.1%;
+        right: 0;
+        &:hover {
+          h1 {
+            color: var(--color-gray);
+          }
+          svg {
+            opacity: 1;
+          }
+        }
+        svg {
+          width: 15px;
+          height: 15px;
+          opacity: 0;
+          transition: all 0.3s ease-in-out;
+          path {
+            fill: var(--color-gray);
+          }
+        }
+        h1 {
+          font-size: 20px;
+          color: var(--color-white);
+          font-family: var(--font-SfMedium);
+          font-weight: unset;
+
+          transition: all 0.3s ease-in-out;
+        }
+      }
+      p {
+        position: absolute;
+        bottom: 0;
+        font-size: 17px;
+        color: var(--color-white);
+        font-family: var(--font-SfMedium);
+      }
+    }
+    .about_me {
+      display: inline-block;
+      padding: 5px 10px;
+      padding-inline: 0px;
+      background-color: transparent;
+      border: unset;
+      text-decoration: unset;
+      transition: all 0.4s ease-in-out;
+      font-size: 18px;
+      font-family: var(--font-SfThin);
+      color: rgba(128, 128, 128, 0.7);
+      position: absolute;
+      overflow: hidden;
+      bottom: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      &:hover {
+        color: var(--color-white);
+        &::before {
+          width: 100%;
+          background-color: var(--color-white);
+        }
+      }
+    }
+  }
+}
