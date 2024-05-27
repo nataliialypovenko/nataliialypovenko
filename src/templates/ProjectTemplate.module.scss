@@ -45,16 +45,17 @@
     }
   }
   .imgs_wrap {
-    padding-inline: 150px;
     margin: auto;
+    max-width: 1400px;
     margin-bottom: 100px;
-    width: 100%;
+    padding-inline: 40px;
+
     .all_imgs {
-      display: flex;
       gap: 10px;
-      flex-wrap: wrap;
+      display: grid;
       align-items: center;
       justify-content: center;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       margin-bottom: 25px;
       list-style: none;
 
@@ -62,7 +63,6 @@
         cursor: pointer;
         overflow: hidden;
         border-radius: 5px;
-        max-width: 500px;
         &:hover {
           img {
             scale: 1.1;
@@ -168,13 +168,13 @@
   .project_page_wrap {
     padding-top: unset;
     .imgs_wrap {
-      padding-inline: unset;
-      .all_imgs {
-        gap: 40px;
-      }
+      padding-inline: 10px;
+
     }
     .project_info {
       margin-bottom: 50px;
+      padding-inline: 10px;
+
       h1 {
         font-size: 22px;
       }
@@ -183,10 +183,10 @@
       }
     }
     .customer_review {
-      padding-inline: 20px;
-      flex-direction: column;
       gap: 10px;
       align-items: center;
+      padding-inline: 10px;
+      flex-direction: column;
     }
   }
 }

@@ -2,11 +2,13 @@ import React, { useRef } from "react";
 import { graphql } from "gatsby";
 import { ReadyToBook } from "../components/readytoBook";
 import { useInView, motion, useScroll, useTransform } from "framer-motion";
-import * as styles from "./ProjectTemplate.module.scss";
 import { Instagram } from "../icons/instagram";
 import { Share } from "../icons/share";
-import { PageData, ProjectsType } from "../types/dataTypes";
-import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image";
+import { PageData } from "../types/dataTypes";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+
+import * as styles from "./ProjectTemplate.module.scss";
+
 const ProjectTemplate: React.FC<PageData> = ({ data }) => {
   const { frontmatter } = data.page;
   const videoRef = useRef(null);
@@ -86,7 +88,10 @@ const ProjectTemplate: React.FC<PageData> = ({ data }) => {
           {frontmatter.all_imgs.map((item, i: number) => (
             <a key={item.postUrl} href={item.postUrl}>
               <abbr title="check instagram post">
-                <GatsbyImage image={getImage(item.imgUrl)} alt={`img + ${i}`} />
+                <GatsbyImage
+                  image={getImage(item.imgUrl)!}
+                  alt={`img + ${i}`}
+                />
               </abbr>
             </a>
           ))}
@@ -99,17 +104,15 @@ const ProjectTemplate: React.FC<PageData> = ({ data }) => {
       <motion.div ref={reviewBlockRef} className={styles.customer_review}>
         <div className={styles.customer_img}>
           <GatsbyImage
-            image={getImage(frontmatter.customerReview.customerImg)}
+            image={getImage(frontmatter.customerReview.customerImg)!}
             alt="customer_img"
           />
         </div>
         <div className={styles.review}>
+          <p style={feedbackBlockInView ? { opacity: "1" } : { opacity: "0" }}>
+            {frontmatter.customerReview.customerFeedBack}
+          </p>
           <a href={frontmatter.customerReview.link}>
-            <p
-              style={feedbackBlockInView ? { opacity: "1" } : { opacity: "0" }}
-            >
-              "{frontmatter.customerReview.customerFeedBack}"
-            </p>
             <span>
               {frontmatter.customerReview.customerName} <Instagram /> <Share />
             </span>
