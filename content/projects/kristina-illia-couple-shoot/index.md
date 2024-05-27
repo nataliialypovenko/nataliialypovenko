@@ -1,5 +1,5 @@
 ---
-title: Kristina & Illia couple shoot
+title: Kristina & Illia couple shoot/
 location: Edmonton , AB , CA
 category: Couple shoots
 description: Lorem lorofsofsdofoesofeosofoesofoseofse
